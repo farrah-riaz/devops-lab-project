@@ -2,27 +2,20 @@ trigger:
   - main
 
 pool:
-  name: Default  # Use your self-hosted agent pool
+  name: Default  # Uses your self-hosted agent
 
 stages:
   - stage: Build
     jobs:
       - job: BuildJob
         steps:
-          - task: NodeTool@0
-            inputs:
-              versionSpec: '18.x'
-            displayName: 'Install Node.js'
+          - script: echo "Installing dependencies..."
+            displayName: 'Install dependencies (mock)'
 
-          - script: |
-              npm install
-            displayName: 'Install dependencies'
-
-          - script: |
-              echo "Build successful!"
-            displayName: 'Run build (placeholder)'
+          - script: echo "Build successful!"
+            displayName: 'Run build (mock)'
 
           - script: |
               echo "Running tests..."
               echo "Tests passed!"
-            displayName: 'Run tests (placeholder)'
+            displayName: 'Run tests (mock)'
