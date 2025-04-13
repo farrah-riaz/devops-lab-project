@@ -2,3 +2,4 @@
 
 Added login feature
 Added implement-logout
+Fixed navbar bug
