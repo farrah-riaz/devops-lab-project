@@ -2,7 +2,7 @@ trigger:
   - main
 
 pool:
-  vmImage: 'ubuntu-latest'
+  name: Default  # Use your self-hosted agent pool
 
 stages:
   - stage: Build
